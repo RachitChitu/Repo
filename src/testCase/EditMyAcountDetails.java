@@ -17,6 +17,7 @@ public class EditMyAcountDetails {
 	@Test(dataProvider = "testData")
 	public void verifyOrderDetails(String userName, String password) {
 		methods.Generic_Methods.threadSleep(3000);
+		
 		repository.Home_Page.getLogin().click();
 		methods.LoginPage.login(userName, password);
 		methods.MyAccountPage.goToMyAccount();

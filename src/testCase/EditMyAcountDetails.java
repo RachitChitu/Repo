@@ -14,18 +14,6 @@ public class EditMyAcountDetails {
 
 	String url;
 
-	@Test(dataProvider = "testData")
-	public void verifyOrderDetails(String userName, String password) {
-		methods.Generic_Methods.threadSleep(3000);
-		
-		repository.Home_Page.getLogin().click();
-		methods.LoginPage.login(userName, password);
-		methods.MyAccountPage.goToMyAccount();
-		utilities.Assertion.verifyAccountPageUrl(url);
-		methods.MyAccountPage.editProfile("Rachit", "Sinha", "8208929221", "19", "08", "1993");
-		methods.Generic_Methods.threadSleep(10000);
-	}
-
 	@BeforeMethod
 	public String openBrowser() {
 		String xlsPath = "C:\\Users\\Guest User\\eclipseworkspace\\BAKEWAY_WEBSITE\\src\\testData\\TestData.xlsx";
